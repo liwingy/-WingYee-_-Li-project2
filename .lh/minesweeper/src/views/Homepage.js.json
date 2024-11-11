@@ -1,0 +1,26 @@
+{
+    "sourceFile": "minesweeper/src/views/Homepage.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1731360614939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1731362008912,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\n     <div>\n       <h1>Welcome to Minesweeper</h1>\n       <p>Select a difficulty to start playing!</p>\n-      <Link to=\"/game/easy\">Easy</Link>\n+      <p><Link to=\"/game/easy\">Easy</Link></p>\n       <Link to=\"/game/medium\">Medium</Link>\n       <Link to=\"/game/hard\">Hard</Link>\n     </div>\n   );\n"
+                },
+                {
+                    "date": 1731362027853,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n   return (\n     <div>\n       <h1>Welcome to Minesweeper</h1>\n       <p>Select a difficulty to start playing!</p>\n-      <p><Link to=\"/game/easy\">Easy</Link></p>\n+      <Link to=\"/game/easy\">Easy</Link>\n       <Link to=\"/game/medium\">Medium</Link>\n       <Link to=\"/game/hard\">Hard</Link>\n     </div>\n   );\n"
+                }
+            ],
+            "date": 1731360614939,
+            "name": "Commit-0",
+            "content": "import React from 'react';\nimport { Link } from 'react-router-dom';\n\nfunction Homepage() {\n  return (\n    <div>\n      <h1>Welcome to Minesweeper</h1>\n      <p>Select a difficulty to start playing!</p>\n      <Link to=\"/game/easy\">Easy</Link>\n      <Link to=\"/game/medium\">Medium</Link>\n      <Link to=\"/game/hard\">Hard</Link>\n    </div>\n  );\n}\n\nexport default Homepage;\n"
+        }
+    ]
+}

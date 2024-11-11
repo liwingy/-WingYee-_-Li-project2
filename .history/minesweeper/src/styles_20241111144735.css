@@ -1,0 +1,112 @@
+/* General Styles */
+body, html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px; /* Increased max-width for larger board support */
+  margin-top: 60px;
+}
+
+/* Navbar Styling */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+/* Board Container */
+.board-container {
+  width: 100%;
+  max-width: 90vw;
+  max-height: 80vh;
+  overflow: auto; /* Allows scrolling if needed */
+  margin-top: 20px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Board Styling */
+.board {
+  display: grid;
+  gap: 2px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Dynamic Columns for Hard Mode */
+.board.hard {
+  grid-template-columns: repeat(30, 20px);
+  transform: scale(0.75); /* Scales down to 75% */
+  transform-origin: top center; /* Keeps it centered */
+}
+
+/* Cell Styling */
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px; /* Smaller font to fit smaller cells */
+  cursor: pointer;
+}
+
+/* Revealed Cell Styling */
+.cell.revealed {
+  background-color: #d0d0d0;
+}
+
+/* Hover Effect for Cell */
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+/* Button Styling */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}

@@ -1,0 +1,108 @@
+/* General Styles */
+body, html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+/* Adjust main container margin to accommodate fixed navbar */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin-top: 60px; /* Add top margin to avoid overlap with navbar */
+}
+
+/* Navbar Styling */
+nav {
+  position: fixed; /* Make the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  gap: 15px;
+  justify-content: center; 
+  background-color: white; /* Background color to cover content behind */
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for visual separation */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #555;
+}
+
+/* Board Styling */
+.board {
+  display: grid;
+  gap: 2px;
+  justify-content: center;
+  margin-top: 20px;
+  /* Dynamically adjust the number of columns based on grid size */
+}
+
+/* Cell Styling */
+.cell {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Revealed Cell Styling */
+.cell.revealed {
+  background-color: #d0d0d0;
+}
+
+/* Hover Effect for Cell */
+.cell:hover {
+  background-color: #e0e0e0;
+}
+
+/* Adjust the cell size for larger grids in hard mode */
+.board.hard .cell {
+  width: 20px;
+  height: 20px;
+  font-size: 16px;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 1024px) {
+  .board.hard .cell {
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}
+
+/* Button Styling */
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #555;
+}

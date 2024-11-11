@@ -1,0 +1,34 @@
+{
+    "sourceFile": "minesweeper/src/components/Cell.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 4,
+            "patches": [
+                {
+                    "date": 1731359249318,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1731360963732,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,16 @@\n-import React from 'react';\n+function Cell({ isRevealed, isMine, adjacentMines, isFlagged, onClick, onRightClick }) {\n+  const content = isRevealed ? (isMine ? '💣' : adjacentMines || '') : (isFlagged ? '🚩' : '');\n \n-function Cell({ isRevealed, isMine, adjacentMines, onClick }) {\n-  const content = isRevealed ? (isMine ? '💣' : adjacentMines || '') : '';\n-\n   return (\n-    <div className={`cell ${isRevealed ? 'revealed' : ''}`} onClick={onClick}>\n+    <div\n+      className={`cell ${isRevealed ? 'revealed' : ''}`}\n+      onClick={onClick}\n+      onContextMenu={(e) => {\n+        e.preventDefault();\n+        onRightClick();\n+      }}\n+    >\n       {content}\n     </div>\n   );\n }\n-\n-export default Cell;\n"
+                },
+                {
+                    "date": 1731361245036,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,13 @@\n-function Cell({ isRevealed, isMine, adjacentMines, isFlagged, onClick, onRightClick }) {\n-  const content = isRevealed ? (isMine ? '💣' : adjacentMines || '') : (isFlagged ? '🚩' : '');\n+import React from 'react';\n \n+function Cell({ isRevealed, isMine, adjacentMines, onClick }) {\n+  const content = isRevealed ? (isMine ? '💣' : adjacentMines || '') : '';\n+\n   return (\n-    <div\n-      className={`cell ${isRevealed ? 'revealed' : ''}`}\n-      onClick={onClick}\n-      onContextMenu={(e) => {\n-        e.preventDefault();\n-        onRightClick();\n-      }}\n-    >\n+    <div className={`cell ${isRevealed ? 'revealed' : ''}`} onClick={onClick}>\n       {content}\n     </div>\n   );\n }\n+\n+export default Cell;\n"
+                },
+                {
+                    "date": 1731363512870,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,17 @@\n import React from 'react';\n \n function Cell({ isRevealed, isMine, adjacentMines, onClick }) {\n-  const content = isRevealed ? (isMine ? '💣' : adjacentMines || '') : '';\n+  let content = '';\n+  if (isRevealed) {\n+    content = isMine ? '💣' : (adjacentMines > 0 ? adjacentMines : '');\n+  }\n \n   return (\n-    <div className={`cell ${isRevealed ? 'revealed' : ''}`} onClick={onClick}>\n+    <div\n+      className={`cell ${isRevealed ? 'revealed' : ''}`}\n+      onClick={onClick}\n+    >\n       {content}\n     </div>\n   );\n }\n"
+                },
+                {
+                    "date": 1731365500819,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,14 @@\n import React from 'react';\n \n-function Cell({ isRevealed, isMine, adjacentMines, onClick }) {\n-  let content = '';\n-  if (isRevealed) {\n-    content = isMine ? '💣' : (adjacentMines > 0 ? adjacentMines : '');\n-  }\n-\n+function Cell({ isRevealed, isMine, adjacentMines, isFlagged, onClick, onContextMenu }) {\n   return (\n     <div\n-      className={`cell ${isRevealed ? 'revealed' : ''}`}\n+      className={`cell ${isRevealed ? \"revealed\" : \"\"}`}\n       onClick={onClick}\n+      onContextMenu={onContextMenu}\n     >\n-      {content}\n+      {isRevealed && isMine ? \"💣\" : isFlagged ? \"🚩\" : isRevealed && adjacentMines > 0 ? adjacentMines : \"\"}\n     </div>\n   );\n }\n \n"
+                }
+            ],
+            "date": 1731359249318,
+            "name": "Commit-0",
+            "content": "import React from 'react';\n\nfunction Cell({ isRevealed, isMine, adjacentMines, onClick }) {\n  const content = isRevealed ? (isMine ? '💣' : adjacentMines || '') : '';\n\n  return (\n    <div className={`cell ${isRevealed ? 'revealed' : ''}`} onClick={onClick}>\n      {content}\n    </div>\n  );\n}\n\nexport default Cell;\n"
+        }
+    ]
+}
