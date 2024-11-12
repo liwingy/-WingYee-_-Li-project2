@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1731374456722,
@@ -20,6 +20,22 @@
                 {
                     "date": 1731386733844,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -91,9 +91,9 @@\n \n     // Check if the player has won\n     if (checkWin(newGrid)) {\n       setHasWon(true);\n-      alert(\"Congratulations! You won🏅!\");\n+      alert(\"Congratulations🥳! You won🏅!\");\n     }\n   }\n \n   // Right-click or shift-click to toggle a flag, implementing the Flag Bomb Function\n"
+                },
+                {
+                    "date": 1731387070403,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,9 +157,9 @@\n   // Render the Minesweeper game\n   return (\n     <div>\n       <h1>{isGameOver ? \"Game Over\" : hasWon ? \"You Won!\" : \"Minesweeper\"}</h1>\n-      <h2>Flags remaining: {flagCount}</h2>\n+      <h2>🚩Flags remaining: {flagCount}</h2>\n       <button onClick={resetGame}>Reset</button>\n       <div className=\"board\" style={{ gridTemplateColumns: `repeat(${config.size}, 1fr)` }}>\n         {grid.map((row, rIndex) =>\n           row.map((cell, cIndex) => (\n"
+                },
+                {
+                    "date": 1731387086584,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -157,9 +157,9 @@\n   // Render the Minesweeper game\n   return (\n     <div>\n       <h1>{isGameOver ? \"Game Over\" : hasWon ? \"You Won!\" : \"Minesweeper\"}</h1>\n-      <h2>🚩Flags remaining: {flagCount}</h2>\n+      <h2>Flags remaining: {flagCount} 🚩</h2>\n       <button onClick={resetGame}>Reset</button>\n       <div className=\"board\" style={{ gridTemplateColumns: `repeat(${config.size}, 1fr)` }}>\n         {grid.map((row, rIndex) =>\n           row.map((cell, cIndex) => (\n"
+                },
+                {
+                    "date": 1731387116365,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -156,9 +156,9 @@\n \n   // Render the Minesweeper game\n   return (\n     <div>\n-      <h1>{isGameOver ? \"Game Over\" : hasWon ? \"You Won!\" : \"Minesweeper\"}</h1>\n+      <h1>{isGameOver ? \"Game Over\" : hasWon ? \"You Won!\" : \"Minesweeper🏆\"}</h1>\n       <h2>Flags remaining: {flagCount} 🚩</h2>\n       <button onClick={resetGame}>Reset</button>\n       <div className=\"board\" style={{ gridTemplateColumns: `repeat(${config.size}, 1fr)` }}>\n         {grid.map((row, rIndex) =>\n"
+                },
+                {
+                    "date": 1731387139373,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -156,9 +156,9 @@\n \n   // Render the Minesweeper game\n   return (\n     <div>\n-      <h1>{isGameOver ? \"Game Over\" : hasWon ? \"You Won!\" : \"Minesweeper🏆\"}</h1>\n+      <h1>{isGameOver ? \"Game Over\" : hasWon ? \"You Won!\" : \"Minesweeper\"}</h1>\n       <h2>Flags remaining: {flagCount} 🚩</h2>\n       <button onClick={resetGame}>Reset</button>\n       <div className=\"board\" style={{ gridTemplateColumns: `repeat(${config.size}, 1fr)` }}>\n         {grid.map((row, rIndex) =>\n"
                 }
             ],
             "date": 1731374456722,

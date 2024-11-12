@@ -158,7 +158,7 @@ function Game() {
   return (
     <div>
       <h1>{isGameOver ? "Game Over" : hasWon ? "You Won!" : "Minesweeper"}</h1>
-      <h2>Flags remaining: {flagCount} 🚩</h2>
+      <h2>🚩Flags remaining: {flagCount}</h2>
       <button onClick={resetGame}>Reset</button>
       <div className="board" style={{ gridTemplateColumns: `repeat(${config.size}, 1fr)` }}>
         {grid.map((row, rIndex) =>
