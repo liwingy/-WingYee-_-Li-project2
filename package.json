@@ -11,7 +11,8 @@
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
     "serve": "^14.2.4",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -24,6 +25,10 @@
       "react-app",
       "react-app/jest"
     ]
+  },
+  "babel": {
+    "presets": ["react-app", "@babel/preset-env"],
+    "plugins": ["@babel/plugin-proposal-private-property-in-object"]
   },
   "browserslist": {
     "production": [
@@ -38,6 +43,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
+
 }
