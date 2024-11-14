@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1731368521085,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1731389035159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,17 +2,47 @@\n   \"name\": \"minesweeper\",\n   \"version\": \"0.1.0\",\n   \"private\": true,\n   \"dependencies\": {\n-    \"react\": \"^18.0.0\",\n-    \"react-dom\": \"^18.0.0\",\n+    \"@testing-library/jest-dom\": \"^5.17.0\",\n+    \"@testing-library/react\": \"^13.4.0\",\n+    \"@testing-library/user-event\": \"^13.5.0\",\n+    \"react\": \"^18.3.1\",\n+    \"react-dom\": \"^18.3.1\",\n     \"react-router-dom\": \"^6.28.0\",\n-    \"react-scripts\": \"^5.0.1\",\n-    \"serve\": \"^13.0.0\" \n+    \"react-scripts\": \"5.0.1\",\n+    \"serve\": \"^14.2.4\",\n+    \"web-vitals\": \"^2.1.4\",\n+    \"@babel/plugin-proposal-private-property-in-object\": \"^7.21.11\"\n   },\n   \"scripts\": {\n     \"start\": \"react-scripts start\",\n     \"build\": \"react-scripts build\",\n     \"test\": \"react-scripts test\",\n     \"eject\": \"react-scripts eject\"\n+  },\n+  \"eslintConfig\": {\n+    \"extends\": [\n+      \"react-app\",\n+      \"react-app/jest\"\n+    ]\n+  },\n+  \"babel\": {\n+    \"presets\": [\"react-app\", \"@babel/preset-env\"],\n+    \"plugins\": [\"@babel/plugin-proposal-private-property-in-object\"]\n+  },\n+  \"browserslist\": {\n+    \"production\": [\n+      \">0.2%\",\n+      \"not dead\",\n+      \"not op_mini all\"\n+    ],\n+    \"development\": [\n+      \"last 1 chrome version\",\n+      \"last 1 firefox version\",\n+      \"last 1 safari version\"\n+    ]\n+  },\n+  \"devDependencies\": {\n   }\n+\n }\n"
                 }
             ],
             "date": 1731368521085,

@@ -8,7 +8,7 @@ import './Homepage.css';
 function Homepage() {
   return (
     <div className="homepage">
-      <h1>Welcome to Minesweeper&#x1F389;</h1>
+      <h1>Welcome to Minesweeper🏆</h1>
       <p>Select a difficulty to start playing!</p>
       
       <div className="difficulty-section">
